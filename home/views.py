@@ -28,6 +28,7 @@ def homePage(request):
         print(each.description)
     # Render the page with the tasks and the form
     return render(request, 'index.html', {'tasks': tasks})
+
 def update_task(request, task_id):
     if request.method == 'POST':
         task = TodoList.objects.get(id=task_id)
